@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('staff', function (Blueprint $table) {
-    $table->enum('staff_type', [
-        'management',
-        'teaching',
-        'non_teaching'
-    ])->nullable()->after('designation');
-});
+        Schema::create('parts', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -25,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('staff', function (Blueprint $table) {
-        $table->dropColumn('staff_type');
-    });
+        Schema::dropIfExists('parts');
     }
 };

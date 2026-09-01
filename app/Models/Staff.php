@@ -21,7 +21,7 @@ class Staff extends Model
         'phone',
         'address',
         'designation',
-        
+        'staff_type',
         'qualification',
         'specialization',
         

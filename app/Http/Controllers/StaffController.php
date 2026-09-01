@@ -32,7 +32,7 @@ class StaffController extends Controller
     {
     $roles = Role::orderBy('name')->get();
     // dd($roles);
-    $parents = Staff::whereIn('designation', ['Director', 'Principal'])->get();
+    $parents = Staff::where('staff_type','=','management')->get();
     $subjects = Subject::all();
     return view('backend.staff.create', compact(
         'roles',
@@ -61,7 +61,7 @@ class StaffController extends Controller
         'specialization' => 'nullable|string',
 
         'role_id' => 'nullable|exists:roles,id',
-
+         'subject_id' => 'nullable|exists:subjects,id',
         'parent_id' => [
             'nullable',
             'exists:staff,id',
@@ -83,16 +83,17 @@ class StaffController extends Controller
 //     'upload_max_filesize' => ini_get('upload_max_filesize'),
 //     'post_max_size' => ini_get('post_max_size'),
 // ]);
-    if (
-        isset($validated['parent_id']) &&
-        $validated['parent_id'] <= 1
-    ) {
-        return back()
-            ->withInput()
-            ->withErrors([
-                'parent_id' => 'Please select a valid parent staff member.'
-            ]);
-    }
+
+    // if (
+    //     isset($validated['parent_id']) &&
+    //     $validated['parent_id'] <= 1
+    // ) {
+    //     return back()
+    //         ->withInput()
+    //         ->withErrors([
+    //             'parent_id' => 'Please select a valid parent staff member.'
+    //         ]);
+    // }
 
            
 
@@ -174,7 +175,7 @@ class StaffController extends Controller
             'department' => 'nullable|string|max:255',
             'qualification' => 'nullable|string|max:255',
             'specialization' => 'nullable|string',
-
+             'subject_id' => 'nullable|exists:subjects,id',
             'role_id' => 'nullable|exists:roles,id',
             'parent_id' => 'nullable|exists:staff,id',
 

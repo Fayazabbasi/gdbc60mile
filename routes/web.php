@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\FacultyMembersController;
 use App\Http\Controllers\frontend\FeeStructureController;
 use App\Http\Controllers\frontend\ProgramController as PC;
@@ -63,11 +63,11 @@ Route::get('/register', function () {
 
 
 //fontend routes
+Route::get('/',[HomeController::class,'index'])->name('frontend.index');
 
-
-Route::get('/', function () {
-    return view('frontend.index');
-})->name('frontend.index');
+// Route::get('/', function () {
+//     return view('frontend.index');
+// })->name('frontend.index');
 
 
 Route::get('/about-us', function () {

@@ -166,7 +166,7 @@
                     <div class="mb-3">
                       <label class="form-label" for="select-default">Select Designation</label>
                       <select class="form-select" id="select-default" name="parent_id">
-                        <option selected="">Select Your Officer</option>
+                        <option selected value="">Select Your Officer</option>
                         
                         @if(!empty($parents))
                         
@@ -192,7 +192,7 @@
                     <div class="mb-3">
                       <label class="form-label" for="select-default">Select</label>
                       <select class="form-select" id="select-default" name="subject_id">
-                        <option selected>Select Subject</option>
+                        <option selected value="">Select Subject</option>
                         @if(!empty($subjects))
                         @foreach($subjects as $subject)
                         <option value="{{ $subject->id }}">{{ $subject->name }}</option>

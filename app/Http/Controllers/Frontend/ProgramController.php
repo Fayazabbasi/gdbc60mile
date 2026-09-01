@@ -37,13 +37,10 @@ class ProgramController extends Controller
 
 public function organization()
 {
-   $regionalDirector = Staff::with([
-        'children.children'
-    ])
-    ->whereNull('parent_id')
-    ->where('staff_type', 'management')
-    ->where('is_active', true)
-    ->first();
+   $topLevel = Staff::whereNull('parent_id')
+            ->where('is_active', 1)
+            ->orderBy('sort_order')
+            ->get();
 // dd(
 //     $regionalDirector->children->toArray()
 // );
@@ -51,7 +48,7 @@ public function organization()
 
     return view(
         'frontend.organizational-structure',
-        compact('regionalDirector')
+        compact('topLevel')
     );
 }
 }

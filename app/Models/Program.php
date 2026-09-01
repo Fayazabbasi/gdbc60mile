@@ -14,6 +14,7 @@ class Program extends Model
         'part',
         'slug',
         'code',
+        'part_id',
         'description',
         'duration',
         'degree_type',

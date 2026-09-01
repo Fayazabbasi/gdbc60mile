@@ -97,12 +97,13 @@
                   <div class="col-md-6 form-group">
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-list"></i></span>
-                      <select name="subject" class="form-control" required="">
-                        <option value="">Select service*</option>
-                        <option value="Service 1">Consulting</option>
-                        <option value="Service 2">Development</option>
-                        <option value="Service 3">Marketing</option>
-                        <option value="Service 4">Support</option>
+                      <select name="subject" class="form-control" required="" name="reporter">
+                        
+                        <option value="">I am *</option>
+                        <option value="Service 1">Student</option>
+                        <option value="Service 2">Parent</option>
+                        <option value="Service 3">Other</option>
+                        
                       </select>
                     </div>
                   </div>
