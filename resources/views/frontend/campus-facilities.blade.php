@@ -59,7 +59,8 @@
             </div>
             <div class="col-lg-6">
               <div class="overview-image">
-                <img src="assets/img/education/campus-3.webp" alt="Campus Overview" class="img-fluid">
+                
+                <img src="{{ asset('storage/' . 'gallery/s8gIOJtlxlyMalQer3AsT4YUmt0U46uxmBKdMFRJ.jpg') }}" alt="Campus Overview" class="img-fluid">
               </div>
             </div>
           </div>
@@ -74,8 +75,8 @@
 
           <div class="categories-grid">
             <div class="facility-card academic-spaces">
-              <div class="card-image">
-                <img src="assets/img/education/campus-4.webp" alt="Academic Spaces" class="img-fluid">
+              <div class="card-image"> 
+                <img src="{{ asset('storage/' . 'gallery/yWS1kmKTOojmemyQfZEXcdGAt0sdNlKaBQCVHjK3.jpg') }}" alt="Academic Spaces" class="img-fluid">
               </div>
               <div class="card-content">
                 <div class="category-icon">
@@ -93,8 +94,8 @@
             </div>
 
             <div class="facility-card sports-wellness">
-              <div class="card-image">
-                <img src="assets/img/education/campus-5.webp" alt="Sports &amp; Wellness" class="img-fluid">
+              <div class="card-image"> 
+                <img src="{{ asset('storage/' . 'gallery/MX6lRXqb74pQ3DebRvpHbUf0tKjnizp3e5jImY0z.jpg') }}" alt="Sports &amp; Wellness" class="img-fluid">
               </div>
               <div class="card-content">
                 <div class="category-icon">
@@ -113,7 +114,7 @@
 
             <div class="facility-card student-life">
               <div class="card-image">
-                <img src="assets/img/education/campus-1.webp" alt="Student Life" class="img-fluid">
+                <img src="{{ asset('storage/' . 'gallery/xIvP9e53lEZQ9OsesMtCzlFUkO5XYgdTZh1sPFlf.jpg') }}" alt="Student Life" class="img-fluid">
               </div>
               <div class="card-content">
                 <div class="category-icon">
@@ -142,102 +143,86 @@
             <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum.</p>
           </div>
 
-          <div class="gallery-showcase swiper init-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 4000
-                },
-                "slidesPerView": 1,
-                "spaceBetween": 0,
-                "centeredSlides": true,
-                "navigation": {
-                  "nextEl": ".gallery-next",
-                  "prevEl": ".gallery-prev"
-                },
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "768": {
-                    "slidesPerView": 1.5
-                  },
-                  "1024": {
-                    "slidesPerView": 2.5
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper" id="swiper-wrapper-5112a4b310387e67a" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-1166.4px, 0px, 0px); transition-delay: 0ms;">
-              
+         <div class="gallery-showcase swiper init-swiper">
 
-              
+    <script type="application/json" class="swiper-config">
+    {
+    "loop": true,
+    "speed": 600,
+    "autoplay": {
+        "delay": 4000
+    },
+    "slidesPerView": 3,
+    "spaceBetween": 0,
+    "centeredSlides": true,
+    "navigation": {
+        "nextEl": ".gallery-next",
+        "prevEl": ".gallery-prev"
+    },
+    "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+    },
+    "breakpoints": {
+        "320": {
+            "slidesPerView": 3
+        },
+        "768": {
+            "slidesPerView": 3
+        },
+        "1024": {
+            "slidesPerView": 3
+        }
+    }
+}
+    </script>
 
-              
+    <div class="swiper-wrapper">
 
-              
+        {{-- Laboratory Gallery Images --}}
+        @foreach($galleries->where('category', 'Laboratories') as $gallery)
 
-              
-            <div class="swiper-slide" role="group" aria-label="2 / 5" style="width: 518.4px;" data-swiper-slide-index="1">
-                <div class="gallery-item">
-                  <img src="assets/img/education/facilities-2.webp" alt="Science Lab" class="img-fluid" loading="lazy">
-                  <div class="item-overlay">
-                    <div class="overlay-content">
-                      <h4>Science Laboratory</h4>
-                      <p>Cutting-edge equipment for innovative research and discovery</p>
-                    </div>
-                  </div>
-                </div>
-              </div><div class="swiper-slide" role="group" aria-label="3 / 5" style="width: 518.4px;" data-swiper-slide-index="2">
-                <div class="gallery-item">
-                  <img src="assets/img/education/facilities-3.webp" alt="Student Union" class="img-fluid" loading="lazy">
-                  <div class="item-overlay">
-                    <div class="overlay-content">
-                      <h4>Student Union</h4>
-                      <p>The heart of campus social life and student activities</p>
-                    </div>
-                  </div>
-                </div>
-              </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="4 / 5" style="width: 518.4px;" data-swiper-slide-index="3">
-                <div class="gallery-item">
-                  <img src="assets/img/education/facilities-4.webp" alt="Recreation Center" class="img-fluid" loading="lazy">
-                  <div class="item-overlay">
-                    <div class="overlay-content">
-                      <h4>Recreation Center</h4>
-                      <p>Modern fitness facilities and wellness programs</p>
-                    </div>
-                  </div>
-                </div>
-              </div><div class="swiper-slide swiper-slide-active" role="group" aria-label="5 / 5" style="width: 518.4px;" data-swiper-slide-index="4">
-                <div class="gallery-item">
-                  <img src="assets/img/education/facilities-5.webp" alt="Arts Building" class="img-fluid" loading="lazy">
-                  <div class="item-overlay">
-                    <div class="overlay-content">
-                      <h4>Arts Building</h4>
-                      <p>Creative spaces for artistic expression and performance</p>
-                    </div>
-                  </div>
-                </div>
-              </div><div class="swiper-slide swiper-slide-next" role="group" aria-label="1 / 5" style="width: 518.4px;" data-swiper-slide-index="0">
-                <div class="gallery-item">
-                  <img src="assets/img/education/facilities-1.webp" alt="Library" class="img-fluid" loading="lazy">
-                  <div class="item-overlay">
-                    <div class="overlay-content">
-                      <h4>Central Library</h4>
-                      <p>A quiet haven for research and study with over 2 million volumes</p>
-                    </div>
-                  </div>
-                </div>
-              </div></div>
+            <div class="swiper-slide">
 
-            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 5" aria-current="true"></span></div>
-            <div class="swiper-button-prev gallery-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-5112a4b310387e67a"></div>
-            <div class="swiper-button-next gallery-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-5112a4b310387e67a"></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        </div>
+                <div class="gallery-item">
+
+                    <img
+                        src="{{ asset('storage/' . $gallery->image) }}"
+                        alt="{{ $gallery->title }}"
+                        class="img-fluid"
+                        loading="lazy"
+                    >
+
+                    <div class="item-overlay">
+
+                        <div class="overlay-content">
+
+                            <h4>{{ $gallery->title }}</h4>
+
+                            @if($gallery->description)
+                                <p>{{ $gallery->description }}</p>
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        @endforeach
+
+    </div>
+
+    {{-- Pagination --}}
+    <div class="swiper-pagination"></div>
+
+    {{-- Navigation --}}
+    <div class="swiper-button-prev gallery-prev"></div>
+    <div class="swiper-button-next gallery-next"></div>
+
+</div>
 
         <!-- Campus Map -->
         

@@ -255,90 +255,11 @@
 
 <div class="container programs-page">
 
-    {{-- ==============================
-         Intermediate Programs
-    =============================== --}}
-
-    <section class="fee-section">
-
-        <div class="section-head">
-            <div class="section-eyebrow">
-                Intermediate Programs
-            </div>
-
-            <h1>Our Programs</h1>
-
-            <h2>
-                Part I &amp; Part II Fee Schedule
-            </h2>
-        </div>
-
-        <div class="table-wrap">
-
-            <table class="fee-table">
-
-                <thead>
-                    <tr>
-                        <th>Head</th>
-                        <th>Part I (Admission)</th>
-                        <th>Part II (Renewal)</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>Tuition Fee (per annum)</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                    <tr>
-                        <td>Admission / Registration Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>—</td>
-                    </tr>
-
-                    <tr>
-                        <td>Library Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                    <tr>
-                        <td>Science Laboratory Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                    <tr>
-                        <td>Sports &amp; Co-curricular Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                    <tr>
-                        <td>College Fund</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-
-    {{-- ==============================
-         Degree Programs
-    =============================== --}}
+   
 
     <section class="alt-bg">
 
-        <hr>
+        
 
         <div class="section-head text-center">
 
@@ -358,43 +279,20 @@
 
                 <thead>
                     <tr>
-                        <th>Head</th>
-                        <th>Part I (Admission)</th>
-                        <th>Part II (Renewal)</th>
+                        <th>Program</th>
+                        <th>Part I (Fees) </th>
+                        <th>Part II(Fees) </th>
                     </tr>
                 </thead>
 
                 <tbody>
-
+                  @foreach($programs as $program)
                     <tr>
-                        <td>Tuition Fee (per annum)</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
+                        <td>{{ $program->name }}</td>
+                        <td>{{$program->part1_fee}} - Rs</td>
+                        <td>{{$program->part2_fee}} - Rs</td>
                     </tr>
-
-                    <tr>
-                        <td>Admission / Registration Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>—</td>
-                    </tr>
-
-                    <tr>
-                        <td>Examination Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                    <tr>
-                        <td>Library &amp; Laboratory Fee</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
-
-                    <tr>
-                        <td>College Fund</td>
-                        <td>[Rs. —]</td>
-                        <td>[Rs. —]</td>
-                    </tr>
+                  @endforeach
 
                 </tbody>
 
@@ -409,7 +307,7 @@
       <div class="grid grid-2">
         <div class="info-panel">
           <h4>How to Pay</h4>
-          <p class="small">Fees are deposited via the designated bank challan at United Bank Limited (UBL), Tharushah Branch and the paid challan copy is submitted to the college accounts office to confirm enrolment.</p>
+          <p class="small">Fees are deposited via the designated bank challan at United Bank Limited (UBL), Nawabshah Branch and the paid challan copy is submitted to the college accounts office to confirm enrolment.</p>
         </div>
         <div class="info-panel">
           <h4>Fee Concessions</h4>

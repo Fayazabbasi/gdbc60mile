@@ -1,209 +1,711 @@
+
 @extends('frontend.layouts.app')
+
 @section('title', 'Events')
 
 @section('content')
 
 
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="heading">
+<!-- Page Title -->
+<div class="page-title">
+
+    <div class="heading">
+
         <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1 class="heading-title">Events</h1>
-              <p class="mb-0">
-                Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo
-                odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum
-                debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat
-                ipsum dolorem.
-              </p>
+
+            <div class="row d-flex justify-content-center text-center">
+
+                <div class="col-lg-8">
+
+                    <h1 class="heading-title">
+                        Events
+                    </h1>
+
+                    <p class="mb-0">
+                        Stay updated with the latest events, activities,
+                        workshops, seminars and programs at our college.
+                    </p>
+
+                </div>
+
             </div>
-          </div>
+
         </div>
-      </div>
-      <nav class="breadcrumbs">
+
+    </div>
+
+
+    <nav class="breadcrumbs">
+
         <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Events</li>
-          </ol>
+
+            <ol>
+
+                <li>
+                    <a href="{{ url('/') }}">
+                        Home
+                    </a>
+                </li>
+
+                <li class="current">
+                    Events
+                </li>
+
+            </ol>
+
         </div>
-      </nav>
-    </div><!-- End Page Title -->
 
-    <!-- Events 2 Section -->
-    <section id="events-2" class="events-2 section">
+    </nav>
 
-      <div class="container">
+</div>
+<!-- End Page Title -->
+
+
+
+<!-- Events 2 Section -->
+<section id="events-2" class="events-2 section">
+
+    <div class="container">
 
         <div class="row g-4">
-          <div class="col-lg-8">
-            <div class="events-list">
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="day">15</span>
-                  <span class="month">JUN</span>
-                </div>
-                <div class="event-content">
-                  <h3>Annual Science Fair Exhibition</h3>
-                  <div class="event-meta">
-                    <p><i class="bi bi-clock"></i> 09:00 AM - 04:00 PM</p>
-                    <p><i class="bi bi-geo-alt"></i> Main Campus Auditorium</p>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin gravida dolor sit amet lacus accumsan.</p>
-                  <a href="#" class="btn-event">Learn More <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div><!-- End Event Item -->
 
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="day">22</span>
-                  <span class="month">JUN</span>
-                </div>
-                <div class="event-content">
-                  <h3>Parent-Teacher Conference</h3>
-                  <div class="event-meta">
-                    <p><i class="bi bi-clock"></i> 01:00 PM - 06:00 PM</p>
-                    <p><i class="bi bi-geo-alt"></i> Multiple Classrooms</p>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin sagittis nisl rhoncus mattis rhoncus.</p>
-                  <a href="#" class="btn-event">Learn More <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div><!-- End Event Item -->
 
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="day">30</span>
-                  <span class="month">JUN</span>
-                </div>
-                <div class="event-content">
-                  <h3>Summer Sports Tournament Final</h3>
-                  <div class="event-meta">
-                    <p><i class="bi bi-clock"></i> 02:30 PM - 05:30 PM</p>
-                    <p><i class="bi bi-geo-alt"></i> Sports Complex</p>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-                  <a href="#" class="btn-event">Learn More <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div><!-- End Event Item -->
+            <!-- ================================= -->
+            <!-- EVENTS LIST -->
+            <!-- ================================= -->
 
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="day">05</span>
-                  <span class="month">JUL</span>
-                </div>
-                <div class="event-content">
-                  <h3>Graduation Ceremony Class of 2023</h3>
-                  <div class="event-meta">
-                    <p><i class="bi bi-clock"></i> 10:00 AM - 01:00 PM</p>
-                    <p><i class="bi bi-geo-alt"></i> Central Auditorium</p>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis.</p>
-                  <a href="#" class="btn-event">Learn More <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div><!-- End Event Item -->
-            </div>
+            <div class="col-lg-8">
 
-            <div class="pagination-wrapper">
-              <ul class="pagination justify-content-center">
-                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="bi bi-chevron-left"></i></a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
-              </ul>
-            </div>
-          </div>
+                <div class="events-list">
 
-          <div class="col-lg-4">
-            <div class="sidebar">
-              <div class="sidebar-item">
-                <h3 class="sidebar-title">Upcoming Events</h3>
-                <div class="event-calendar">
-                  <div class="calendar-header">
-                    <h4>June 2023</h4>
-                  </div>
-                  <div class="calendar-body">
-                    <div class="weekdays">
-                      <div>Su</div>
-                      <div>Mo</div>
-                      <div>Tu</div>
-                      <div>We</div>
-                      <div>Th</div>
-                      <div>Fr</div>
-                      <div>Sa</div>
+
+                    @forelse($events as $event)
+
+                        <!-- Event Item -->
+                        <div
+                            class="event-item"
+                            id="event-{{ $event->event_date->format('Y-m-d') }}"
+                        >
+
+
+                            <!-- Event Date -->
+                            <div class="event-date">
+
+                                <span class="day">
+                                    {{ $event->event_date->format('d') }}
+                                </span>
+
+                                <span class="month">
+                                    {{ strtoupper($event->event_date->format('M')) }}
+                                </span>
+
+                            </div>
+
+
+                            <!-- Event Content -->
+                            <div class="event-content">
+
+
+                                <!-- Title -->
+                                <h3>
+                                    {{ $event->title }}
+                                </h3>
+
+
+                                <!-- Event Meta -->
+                                <div class="event-meta">
+
+
+                                    {{-- Time --}}
+                                    @if($event->start_time || $event->end_time)
+
+                                        <p>
+
+                                            <i class="bi bi-clock"></i>
+
+                                            @if($event->start_time)
+
+                                                {{ \Carbon\Carbon::parse($event->start_time)->format('h:i A') }}
+
+                                            @endif
+
+
+                                            @if($event->start_time && $event->end_time)
+
+                                                -
+
+                                            @endif
+
+
+                                            @if($event->end_time)
+
+                                                {{ \Carbon\Carbon::parse($event->end_time)->format('h:i A') }}
+
+                                            @endif
+
+                                        </p>
+
+                                    @endif
+
+
+                                    {{-- Location --}}
+                                    @if($event->location)
+
+                                        <p>
+
+                                            <i class="bi bi-geo-alt"></i>
+
+                                            {{ $event->location }}
+
+                                        </p>
+
+                                    @endif
+
+
+                                </div>
+
+
+                                <!-- Description -->
+                                @if($event->description)
+
+                                    <p>
+                                        {{ Str::limit($event->description, 220) }}
+                                    </p>
+
+                                @endif
+
+
+                                <!-- Learn More -->
+                                <a
+                                    href="#"
+                                    class="btn-event"
+                                >
+
+                                    Learn More
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </a>
+
+
+                            </div>
+
+                        </div>
+                        <!-- End Event Item -->
+
+
+                    @empty
+
+
+                        <!-- No Events -->
+                        <div class="alert alert-info">
+
+                            <i class="bi bi-info-circle me-2"></i>
+
+                            No events available at the moment.
+
+                        </div>
+
+
+                    @endforelse
+
+
+                </div>
+
+
+                <!-- ================================= -->
+                <!-- PAGINATION -->
+                <!-- ================================= -->
+
+                @if(method_exists($events, 'links'))
+
+                    <div class="pagination-wrapper">
+
+                        {{ $events->links() }}
+
                     </div>
-                    <div class="days">
-                      <div class="day other-month">28</div>
-                      <div class="day other-month">29</div>
-                      <div class="day other-month">30</div>
-                      <div class="day other-month">31</div>
-                      <div class="day">1</div>
-                      <div class="day">2</div>
-                      <div class="day">3</div>
-                      <div class="day">4</div>
-                      <div class="day">5</div>
-                      <div class="day">6</div>
-                      <div class="day">7</div>
-                      <div class="day">8</div>
-                      <div class="day">9</div>
-                      <div class="day">10</div>
-                      <div class="day">11</div>
-                      <div class="day">12</div>
-                      <div class="day">13</div>
-                      <div class="day">14</div>
-                      <div class="day has-event">15</div>
-                      <div class="day">16</div>
-                      <div class="day">17</div>
-                      <div class="day">18</div>
-                      <div class="day">19</div>
-                      <div class="day">20</div>
-                      <div class="day">21</div>
-                      <div class="day has-event">22</div>
-                      <div class="day">23</div>
-                      <div class="day">24</div>
-                      <div class="day">25</div>
-                      <div class="day">26</div>
-                      <div class="day">27</div>
-                      <div class="day">28</div>
-                      <div class="day">29</div>
-                      <div class="day has-event">30</div>
-                      <div class="day other-month">1</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="sidebar-item featured-event">
-                <h3 class="sidebar-title">Featured Event</h3>
-                <div class="featured-event-content">
-                  <img src="assets/img/education/events-5.webp" alt="Featured Event" class="img-fluid">
-                  <h4>Annual Arts Festival</h4>
-                  <p><i class="bi bi-calendar-event"></i> July 15-17, 2023</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus consectetur adipiscing elit.</p>
-                  <a href="#" class="btn-register">Register Now</a>
-                </div>
-              </div>
+                @endif
 
-              <div class="sidebar-item">
-                <h3 class="sidebar-title">Event Categories</h3>
-                <div class="categories">
-                  <ul>
-                    <li><a href="#">Academic <span>(12)</span></a></li>
-                    <li><a href="#">Sports <span>(8)</span></a></li>
-                    <li><a href="#">Cultural <span>(6)</span></a></li>
-                    <li><a href="#">Workshops <span>(4)</span></a></li>
-                    <li><a href="#">Conferences <span>(3)</span></a></li>
-                  </ul>
-                </div>
-              </div>
+
             </div>
-          </div>
+            <!-- End Events List -->
+
+
+
+            <!-- ================================= -->
+            <!-- SIDEBAR -->
+            <!-- ================================= -->
+
+            <div class="col-lg-4">
+
+                <div class="sidebar">
+
+
+                    <!-- ================================= -->
+                    <!-- DYNAMIC CALENDAR -->
+                    <!-- ================================= -->
+
+                    <div class="sidebar-item">
+
+                        <h3 class="sidebar-title">
+                            Upcoming Events
+                        </h3>
+
+
+                        @php
+
+                            /*
+                            |--------------------------------------------------------------------------
+                            | Current Month
+                            |--------------------------------------------------------------------------
+                            */
+
+                            $currentMonth = now()->startOfMonth();
+
+
+                            /*
+                            |--------------------------------------------------------------------------
+                            | Calendar Start
+                            |--------------------------------------------------------------------------
+                            |
+                            | Start from Sunday before/at beginning of month
+                            |
+                            */
+
+                            $calendarStart = $currentMonth
+                                ->copy()
+                                ->startOfWeek(\Carbon\Carbon::SUNDAY);
+
+
+                            /*
+                            |--------------------------------------------------------------------------
+                            | Calendar End
+                            |--------------------------------------------------------------------------
+                            */
+
+                            $calendarEnd = $currentMonth
+                                ->copy()
+                                ->endOfMonth()
+                                ->endOfWeek(\Carbon\Carbon::SATURDAY);
+
+
+                            /*
+                            |--------------------------------------------------------------------------
+                            | Group Events By Date
+                            |--------------------------------------------------------------------------
+                            */
+
+                            $eventDates = $events->groupBy(function ($event) {
+
+                                return $event->event_date->format('Y-m-d');
+
+                            });
+
+                        @endphp
+
+
+                        <!-- Calendar -->
+                        <div class="event-calendar">
+
+
+                            <!-- Calendar Header -->
+                            <div class="calendar-header">
+
+                                <h4>
+                                    {{ $currentMonth->format('F Y') }}
+                                </h4>
+
+                            </div>
+
+
+                            <!-- Calendar Body -->
+                            <div class="calendar-body">
+
+
+                                <!-- Weekdays -->
+                                <div class="weekdays">
+
+                                    <div>Su</div>
+                                    <div>Mo</div>
+                                    <div>Tu</div>
+                                    <div>We</div>
+                                    <div>Th</div>
+                                    <div>Fr</div>
+                                    <div>Sa</div>
+
+                                </div>
+
+
+                                <!-- Days -->
+                                <div class="days">
+
+
+                                    @while($calendarStart <= $calendarEnd)
+
+
+                                        @php
+
+                                            $dateKey =
+                                                $calendarStart->format('Y-m-d');
+
+
+                                            /*
+                                            |--------------------------------------------------------------------------
+                                            | Check Current Month
+                                            |--------------------------------------------------------------------------
+                                            */
+
+                                            $isCurrentMonth =
+                                                $calendarStart->month ==
+                                                $currentMonth->month;
+
+
+                                            /*
+                                            |--------------------------------------------------------------------------
+                                            | Check Event
+                                            |--------------------------------------------------------------------------
+                                            */
+
+                                            $hasEvent =
+                                                isset($eventDates[$dateKey]);
+
+
+                                            /*
+                                            |--------------------------------------------------------------------------
+                                            | Check Today
+                                            |--------------------------------------------------------------------------
+                                            */
+
+                                            $isToday =
+                                                $calendarStart->isToday();
+
+                                        @endphp
+
+
+                                        <div
+                                            class="day
+                                                {{ !$isCurrentMonth ? 'other-month' : '' }}
+                                                {{ $hasEvent ? 'has-event' : '' }}
+                                                {{ $isToday ? 'today' : '' }}"
+                                        >
+
+
+                                            @if($hasEvent)
+
+
+                                                <!-- Event Date -->
+                                                <a
+                                                    href="#event-{{ $dateKey }}"
+                                                    title="@foreach($eventDates[$dateKey] as $calendarEvent){{ $calendarEvent->title }}@if(!$loop->last), @endif @endforeach"
+                                                >
+
+                                                    {{ $calendarStart->day }}
+
+                                                </a>
+
+
+                                            @else
+
+
+                                                {{ $calendarStart->day }}
+
+
+                                            @endif
+
+
+                                        </div>
+
+
+                                        @php
+
+                                            $calendarStart->addDay();
+
+                                        @endphp
+
+
+                                    @endwhile
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- End Calendar -->
+
+
+                    </div>
+                    <!-- End Calendar Sidebar -->
+
+
+
+                    <!-- ================================= -->
+                    <!-- FEATURED EVENT -->
+                    <!-- ================================= -->
+
+                    @php
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Get Next Upcoming Event
+                        |--------------------------------------------------------------------------
+                        */
+
+                        $featuredEvent = $events
+                            ->filter(function ($event) {
+
+                                return $event->event_date
+                                    ->gte(\Carbon\Carbon::today());
+
+                            })
+                            ->sortBy('event_date')
+                            ->first();
+
+                    @endphp
+
+
+                    @if($featuredEvent)
+
+
+                        <div class="sidebar-item featured-event">
+
+
+                            <h3 class="sidebar-title">
+                                Featured Event
+                            </h3>
+
+
+                            <div class="featured-event-content">
+
+
+                                <!-- Event Icon / Image -->
+                                <div class="mb-3">
+
+                                    <i
+                                        class="bi bi-calendar-event"
+                                        style="font-size: 45px;"
+                                    ></i>
+
+                                </div>
+
+
+                                <!-- Event Title -->
+                                <h4>
+                                    {{ $featuredEvent->title }}
+                                </h4>
+
+
+                                <!-- Date -->
+                                <p>
+
+                                    <i class="bi bi-calendar-event"></i>
+
+                                    {{ $featuredEvent->event_date->format('d F Y') }}
+
+                                </p>
+
+
+                                <!-- Time -->
+                                @if(
+                                    $featuredEvent->start_time ||
+                                    $featuredEvent->end_time
+                                )
+
+                                    <p>
+
+                                        <i class="bi bi-clock"></i>
+
+                                        @if($featuredEvent->start_time)
+
+                                            {{ \Carbon\Carbon::parse($featuredEvent->start_time)->format('h:i A') }}
+
+                                        @endif
+
+
+                                        @if(
+                                            $featuredEvent->start_time &&
+                                            $featuredEvent->end_time
+                                        )
+
+                                            -
+
+                                        @endif
+
+
+                                        @if($featuredEvent->end_time)
+
+                                            {{ \Carbon\Carbon::parse($featuredEvent->end_time)->format('h:i A') }}
+
+                                        @endif
+
+                                    </p>
+
+                                @endif
+
+
+                                <!-- Location -->
+                                @if($featuredEvent->location)
+
+                                    <p>
+
+                                        <i class="bi bi-geo-alt"></i>
+
+                                        {{ $featuredEvent->location }}
+
+                                    </p>
+
+                                @endif
+
+
+                                <!-- Description -->
+                                @if($featuredEvent->description)
+
+                                    <p>
+
+                                        {{ Str::limit(
+                                            $featuredEvent->description,
+                                            150
+                                        ) }}
+
+                                    </p>
+
+                                @endif
+
+
+                                <!-- Button -->
+                                <a
+                                    href="#event-{{ $featuredEvent->event_date->format('Y-m-d') }}"
+                                    class="btn-register"
+                                >
+
+                                    View Event
+
+                                </a>
+
+
+                            </div>
+
+                        </div>
+
+
+                    @endif
+                    <!-- End Featured Event -->
+
+
+
+                    <!-- ================================= -->
+                    <!-- EVENT CATEGORIES -->
+                    <!-- ================================= -->
+
+                    <div class="sidebar-item">
+
+
+                        <h3 class="sidebar-title">
+                            Event Categories
+                        </h3>
+
+
+                        <div class="categories">
+
+
+                            <ul>
+
+
+                                @php
+
+                                    $categories = $events
+                                        ->filter(function ($event) {
+
+                                            return !empty($event->category);
+
+                                        })
+                                        ->groupBy('category');
+
+                                @endphp
+
+
+                                @forelse($categories as $category => $categoryEvents)
+
+
+                                    <li>
+
+                                        <a href="#">
+
+                                            {{ $category }}
+
+                                            <span>
+                                                ({{ $categoryEvents->count() }})
+                                            </span>
+
+                                        </a>
+
+                                    </li>
+
+
+                                @empty
+
+
+                                    <li>
+
+                                        <a href="#">
+                                            No categories available.
+                                        </a>
+
+                                    </li>
+
+
+                                @endforelse
+
+
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                    <!-- End Event Categories -->
+
+
+                </div>
+
+            </div>
+            <!-- End Sidebar -->
+
+
         </div>
 
-      </div>
+    </div>
 
-    </section><!-- /Events 2 Section -->
+</section>
+<!-- /Events 2 Section -->
 
 
 @endsection
+
+
+
+
+@push('styles')
+<style>
+    /* Event dates */
+    .event-calendar .days .day.has-event {
+        background-color: green !important;
+        color: white !important;
+        border-radius: 50%;
+        font-weight: 600;
+    }
+
+    /* Event date link */
+    .event-calendar .days .day.has-event a {
+        color: white !important;
+        text-decoration: none;
+    }
+
+    /* Hover effect */
+    .event-calendar .days .day.has-event:hover {
+        background-color: #006400 !important;
+    }
+</style>
+@endpush
+

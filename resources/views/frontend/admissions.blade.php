@@ -62,11 +62,11 @@
             </div>
             <div class="col-lg-4">
               <div class="hero-image">
-                <img src="{{ asset('storage/students-3.png')}}" class="img-fluid" alt="Students">
-                <div class="floating-badge">
+                <img src="{{ asset('storage/' . $image->image) }}" class="img-fluid" alt="Students">
+                <!-- <div class="floating-badge">
                   <i class="bi bi-mortarboard"></i>
                   <span>Join 12,000+ Alumni</span>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -83,8 +83,8 @@
                 <i class="bi bi-file-earmark-text"></i>
               </div>
               <div class="timeline-content">
-                <h4>Submit Application</h4>
-                <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed.</p>
+                <h4>Submit Documents</h4>
+                <!-- <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed.</p> -->
                 <span class="timeline-duration">2-3 days</span>
               </div>
             </div>
@@ -94,8 +94,8 @@
               </div>
               <div class="timeline-content">
                 <h4>Document Review</h4>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec rutrum congue leo eget malesuada.</p>
-                <span class="timeline-duration">5-7 days</span>
+                <!-- <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec rutrum congue leo eget malesuada.</p> -->
+                <span class="timeline-duration">2-3 days</span>
               </div>
             </div>
             <div class="timeline-item">
@@ -103,9 +103,9 @@
                 <i class="bi bi-chat-dots"></i>
               </div>
               <div class="timeline-content">
-                <h4>Assessment Interview</h4>
-                <p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.</p>
-                <span class="timeline-duration">1-2 weeks</span>
+                <h4>Application Fee</h4>
+                <!-- <p>Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.</p> -->
+                <span class="timeline-duration">2-3 days</span>
               </div>
             </div>
             <div class="timeline-item">
@@ -114,8 +114,8 @@
               </div>
               <div class="timeline-content">
                 <h4>Final Decision</h4>
-                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et.</p>
-                <span class="timeline-duration">2-3 weeks</span>
+                <!-- <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et.</p> -->
+               <span class="timeline-duration">2-3 days</span>
               </div>
             </div>
           </div>
@@ -132,10 +132,10 @@
                   </div>
                   <div class="check-content">
                     <h5>Academic Transcripts</h5>
-                    <p>Official high school or college records</p>
+                    
                   </div>
                 </div>
-                <div class="checklist-item">
+                <!-- <div class="checklist-item">
                   <div class="check-icon">
                     <i class="bi bi-check2"></i>
                   </div>
@@ -143,17 +143,17 @@
                     <h5>Standardized Tests</h5>
                     <p>SAT, ACT, or equivalent scores</p>
                   </div>
-                </div>
+                </div> -->
                 <div class="checklist-item">
                   <div class="check-icon">
                     <i class="bi bi-check2"></i>
                   </div>
                   <div class="check-content">
-                    <h5>Personal Statement</h5>
-                    <p>500-800 word essay on your goals</p>
+                    <h5>Review Documents</h5>
+                    
                   </div>
                 </div>
-                <div class="checklist-item">
+                <!-- <div class="checklist-item">
                   <div class="check-icon">
                     <i class="bi bi-check2"></i>
                   </div>
@@ -161,8 +161,8 @@
                     <h5>Recommendation Letters</h5>
                     <p>Two letters from academic references</p>
                   </div>
-                </div>
-                <div class="checklist-item">
+                </div> -->
+                <!-- <div class="checklist-item">
                   <div class="check-icon">
                     <i class="bi bi-check2"></i>
                   </div>
@@ -170,28 +170,37 @@
                     <h5>Portfolio (if applicable)</h5>
                     <p>For art, design, and creative programs</p>
                   </div>
-                </div>
+                </div> -->
                 <div class="checklist-item">
                   <div class="check-icon">
                     <i class="bi bi-check2"></i>
                   </div>
                   <div class="check-content">
                     <h5>Application Fee</h5>
-                    <p>$75 processing fee (waived for qualified students)</p>
+                    
+                  </div>
+                </div>
+                <div class="checklist-item">
+                  <div class="check-icon">
+                    <i class="bi bi-check2"></i>
+                  </div>
+                  <div class="check-content">
+                    <h5>Final Decision</h5>
+                    
                   </div>
                 </div>
               </div>
-              <div class="international-note">
+              <!-- <div class="international-note">
                 <i class="bi bi-globe"></i>
                 <div>
                   <h6>International Students</h6>
                   <p>Additional requirements include English proficiency scores (TOEFL/IELTS) and visa documentation.</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
             <div class="tuition-overview">
               <h3>Investment in Your Future</h3>
               <div class="tuition-cards">
@@ -242,10 +251,10 @@
                 <a href="#" class="support-link">Explore Financial Aid Options <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="deadlines-showcase mt-5">
+        <!-- <div class="deadlines-showcase mt-5">
           <div class="showcase-header">
             <h3>Key Dates &amp; Deadlines</h3>
             <p>Stay on track with these important milestones for the upcoming academic year</p>
@@ -276,15 +285,39 @@
               <div class="card-footer">Enrollment</div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="contact-section mt-5">
           <div class="row align-items-center">
-            <div class="col-lg-7">
+            <div class="col-lg-12">
               <div class="contact-content">
                 <h3>Connect with Our Admissions Team</h3>
                 <p>Have questions about your application or need personalized guidance? Our dedicated admissions counselors are here to help you navigate the process and make informed decisions about your academic future.</p>
-                <form action="forms/contact.php" class="inquiry-form php-email-form">
+                @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+@endif
+
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+                  <form action="{{ route('admission.inquiry') }}" method="POST" class="inquiry-form">
+                    @csrf
                   <div class="form-group-row">
                     <div class="form-group">
                       <input type="text" name="name" placeholder="Full Name*" required="">
@@ -298,12 +331,11 @@
                       <input type="tel" name="phone" placeholder="Phone Number">
                     </div>
                     <div class="form-group">
-                      <select name="subject" required="">
+                      <select name="program_id" required="">
                         <option selected="" disabled="">Program Interest*</option>
-                        <option>Undergraduate</option>
-                        <option>Graduate</option>
-                        <option>Doctorate</option>
-                        <option>Certificate</option>
+                        @foreach($programs as $program)
+                        <option value="{{ $program->id }}">{{ $program->name }}</option>
+                        @endforeach
                       </select>
                     </div>
                   </div>
@@ -311,52 +343,15 @@
                     <textarea name="message" rows="5" placeholder="Tell us about your interests and goals..."></textarea>
                   </div>
                   <div class="form-actions">
-                    <div class="loading">Loading</div>
+                    <!-- <div class="loading">Loading</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">Your inquiry has been sent. Thank you!</div>
+                    <div class="sent-message">Your inquiry has been sent. Thank you!</div> -->
                     <button type="submit" class="submit-btn">Send Inquiry</button>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="col-lg-5">
-              <div class="visit-invitation">
-                <div class="visit-image">
-                  <img src="{{ asset('storage/campus-8.png')}}" class="img-fluid" alt="Campus" loading="lazy">
-                  <div class="visit-overlay">
-                    <i class="bi bi-play-circle"></i>
-                    <span>Virtual Campus Tour</span>
-                  </div>
-                </div>
-                <div class="visit-details">
-                  <h4>Experience Our Campus</h4>
-                  <div class="visit-options">
-                    <div class="visit-option">
-                      <i class="bi bi-calendar3"></i>
-                      <div>
-                        <span class="option-title">In-Person Tours</span>
-                        <span class="option-detail">Monday - Friday, 10 AM &amp; 2 PM</span>
-                      </div>
-                    </div>
-                    <div class="visit-option">
-                      <i class="bi bi-camera-video"></i>
-                      <div>
-                        <span class="option-title">Virtual Experience</span>
-                        <span class="option-detail">Interactive online campus tours available 24/7</span>
-                      </div>
-                    </div>
-                    <div class="visit-option">
-                      <i class="bi bi-people"></i>
-                      <div>
-                        <span class="option-title">Information Sessions</span>
-                        <span class="option-detail">Meet with admissions counselors and current students</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="schedule-btn">Schedule Your Visit</a>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
 

@@ -128,12 +128,19 @@
     <div class="card">
 
         <h3>{{ $inter->name }}</h3>
-
+        
         @if($inter->subjects->count())
-
-    <p class="small">
-        {{ $inter->subjects->pluck('name')->implode(', ') }}
-    </p>
+         <ul>
+         @foreach($inter->subjects as $int)
+         <li>
+         {{ $int->name }}
+        </li>
+         @endforeach
+       </ul>
+       
+    <!-- <p class="small">
+        {{ $inter->subjects->pluck('name')->implode(', ') }} 
+    </p> -->
 
 @else
 
@@ -164,10 +171,18 @@
         <h3>{{ $associate->name }}</h3>
 
         @if($associate->subjects->count())
+ 
+         <ul>
+         @foreach($associate->subjects as $sub)
+         <li>
+         {{ $sub->name }}
+        </li>
+         @endforeach
+       </ul>
 
-    <p class="small">
+    <!-- <p class="small">
         {{ $associate->subjects->pluck('name')->implode(', ') }}
-    </p>
+    </p> -->
 
 @else
 

@@ -100,13 +100,18 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('programs.index') }}" class="nav-link active">
+                    <a href="{{ route('staff.index') }}" class="nav-link active">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>View Staff</p>
                     </a>
                   </li>
                   
                 </ul>
+                
+                 
+                  
+                </ul>
+
               </li>
               </ul>
 
@@ -163,6 +168,38 @@
                   </li>
                   
                 </ul>
+
+                <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" data-accordion="false" id="navigation" tabindex="-1">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-expanded="false">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                   Gallery
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none; box-sizing: border-box;">
+                  <li class="nav-item">
+                    <a href="{{ route('gallery.index') }}" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Add Gallery</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('gallery.index') }}" class="nav-link active">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>View Gallery</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+                
+                 
+                  
+                </ul>
+
+              </li>
+              </ul>
               </li>
               </ul>
             <!--end::Sidebar Menu-->

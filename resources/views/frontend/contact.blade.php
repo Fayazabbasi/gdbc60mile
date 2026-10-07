@@ -11,10 +11,10 @@
             <div class="col-lg-8">
               <h1 class="heading-title">Contact</h1>
               <p class="mb-0">
-                Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo
-                odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum
-                debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat
-                ipsum dolorem.
+                Have a question, need information, or would like to get in touch with Government Degree College 60 Mile? We are here to assist you. Whether you are a student, parent, or visitor, you can contact us for information about admissions, academic programs, college facilities, notices, and other educational matters.
+
+Please use the contact form below to send us your message. Our college administration will review your inquiry and respond as soon as possible. We welcome your questions, suggestions, and feedback as we continue to provide quality education and support to our students.
+
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@
                 <i class="bi bi-geo-alt"></i>
               </div>
               <h3>Our Address</h3>
-              <p>2847 Rainbow Road, Springfield, IL 62701, USA</p>
+              <p>Government Degree College 60 Mile.</p>
             </div>
           </div>
 
@@ -52,8 +52,8 @@
                 <i class="bi bi-telephone"></i>
               </div>
               <h3>Contact Number</h3>
-              <p>Mobile: +1 (555) 123-4567<br>
-                Email: info@example.com</p>
+              <p>Mobile: +92333 7083339<br>
+                Email: Gdc60mile@gmail.com</p>
             </div>
           </div>
 
@@ -63,17 +63,18 @@
                 <i class="bi bi-clock"></i>
               </div>
               <h3>Opening Hour</h3>
-              <p>Monday - Saturday: 9:00 - 18:00<br>
-                Sunday: Closed</p>
+              <p>Monday - Fri: 9:00AM - 1:30PM<br>
+                Saturday - Sunday: Closed</p>
             </div>
           </div>
         </div>
-
+          
         <div class="row">
           <div class="col-lg-12">
             <div class="form-wrapper">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
+              <form action="{{ route('contact.store') }}" method="post" role="form" class="php-email-form">
+                 @csrf  
+              <div class="row">
                   <div class="col-md-6 form-group">
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-person"></i></span>
@@ -97,7 +98,7 @@
                   <div class="col-md-6 form-group">
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-list"></i></span>
-                      <select name="subject" class="form-control" required="" name="reporter">
+                      <select name="subject" class="form-control" required="">
                         
                         <option value="">I am *</option>
                         <option value="Service 1">Student</option>
@@ -114,9 +115,23 @@
                     </div>
                   </div>
                   <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <!-- <div class="loading">Loading</div> -->
+                    <!-- <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                     @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+           @endif
+           @if($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                   </div>
                   <div class="text-center">
                     <button type="submit">Submit Message</button>

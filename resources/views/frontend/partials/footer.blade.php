@@ -10,20 +10,20 @@
               <a href="index.html" class="logo d-flex align-items-center mb-4">
                 <span class="sitename">Govt. Degree College 60 Mile</span>
               </a>
-              <p class="brand-description">Crafting exceptional digital experiences through thoughtful design and innovative solutions that elevate your brand presence.</p>
+              <p class="brand-description">Welcome to the official website of Government Degree College 60 Mile. We are pleased to have you visit our website.</p>
 
               <div class="contact-info mt-5">
                 <div class="contact-item">
                   <i class="bi bi-geo-alt"></i>
-                  <span>123 Creative Boulevard, Design District, NY 10012</span>
+                  <span>Govt. Degree College 60 Mile</span>
                 </div>
                 <div class="contact-item">
                   <i class="bi bi-telephone"></i>
-                  <span>+1 (555) 987-6543</span>
+                  <span>+92333 7083339</span>
                 </div>
                 <div class="contact-item">
                   <i class="bi bi-envelope"></i>
-                  <span>hello@designstudio.com</span>
+                  <span>Gdc60mile@gmail.com</span>
                 </div>
               </div>
             </div>

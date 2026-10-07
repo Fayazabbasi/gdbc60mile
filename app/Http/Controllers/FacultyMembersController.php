@@ -14,7 +14,7 @@ class FacultyMembersController extends Controller
     $lecturers = Staff::where('staff_type', 'teaching')
     ->where('is_active', true)
     ->get();
-    $workers = Staff::where('staff_type', 'non-teaching')
+    $workers = Staff::where('staff_type', 'non_teaching')
     ->where('is_active', true)
     ->get();
     return view('frontend.faculty-members', compact('lecturers','administrators','workers'));

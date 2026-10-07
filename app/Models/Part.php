@@ -11,10 +11,15 @@ class Part extends Model
 
     protected $fillable = [
         'name',
+        
     ];
 
     public function programs(): HasMany
     {
         return $this->hasMany(Program::class, 'part_id');
     }
+    public function part()
+{
+    return $this->belongsTo(Part::class, 'part_id');
+}
 }

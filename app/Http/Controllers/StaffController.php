@@ -17,12 +17,14 @@ class StaffController extends Controller
      */
     public function index()
     {
-        $staff = Staff::with(['role', 'parent'])
+        $staffs = Staff::with(['role', 'parent'])
+            ->where('staff_type','!=',"management")
             ->orderBy('sort_order')
             ->orderBy('name')
             ->paginate(15);
+           //echo "<pre>";  print_r($staffs);die;
 
-        return view('backend.staff.index', compact('staff'));
+        return view('backend.staff.index', compact('staffs'));
     }
 
     /**

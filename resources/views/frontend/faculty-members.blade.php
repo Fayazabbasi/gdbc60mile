@@ -101,7 +101,7 @@
                   <img src="{{ asset('storage/' . $administrator->photo) }}" alt="{{ $administrator->name }}" class="img-fluid" alt="Faculty">
                 </div>
                 <div class="profile-content">
-                  <h3>{{ $administrator->specialization }}</h3>
+                  <h3>{{ $administrator->designation  }}</h3>
                   <p class="position">{{ $administrator->name }}</p>
                   <div class="department-info">{{ $administrator->qualification }}</div>
                   <!-- <div class="research-focus">
@@ -143,7 +143,7 @@
                   <img src="{{ asset('storage/' . $lecturer->photo) }}" alt="{{ $lecturer->name }}" class="img-fluid" alt="Faculty">
                 </div>
                 <div class="profile-content">
-                  <h3>{{ $lecturer->specialization }}</h3>
+                  <h3>{{ $lecturer->designation  }}</h3>
                   <p class="position">{{ $lecturer->name }}</p>
                   <div class="department-info">{{ $lecturer->qualification }}</div>
                   <!-- <div class="research-focus">
@@ -186,7 +186,7 @@
                   <img src="{{ asset('storage/' . $worker->photo) }}" alt="{{ $worker->name }}" class="img-fluid" alt="Faculty">
                 </div>
                 <div class="profile-content">
-                  <h3>{{ $worker->specialization }}</h3>
+                  <h3>{{ $worker->designation }}</h3>
                   <p class="position">{{ $worker->name }}</p>
                   <div class="department-info">{{ $worker->qualification }}</div>
                   <!-- <div class="research-focus">

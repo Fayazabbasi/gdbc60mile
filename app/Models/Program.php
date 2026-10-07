@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Program extends Model
 {
@@ -45,5 +46,11 @@ class Program extends Model
 {
     return $this->belongsToMany(Subject::class, 'program_subject')
         ->withTimestamps();
+}
+
+
+public function programParts(): HasMany
+{
+    return $this->hasMany(ProgramPart::class, 'program_id');
 }
 }

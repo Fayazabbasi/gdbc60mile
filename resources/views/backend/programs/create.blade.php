@@ -136,6 +136,23 @@
                       </select>
                     </div>
 
+                    <div class="mb-3">
+    <label class="form-label" for="part1">Select program Part</label>
+
+    <select class="form-select" id="part_id" name="part_id" required>
+        <option value="">Select Part</option>
+
+        
+            <option value="1">
+                part I
+            </option>
+            <option value="2">
+                part II
+            </option>
+        
+    </select>
+</div>
+
                    <div class="mb-3">
                       <label class="form-label" for="select-default">Select</label>
                       <select class="form-select" id="select-default" name="is_active">

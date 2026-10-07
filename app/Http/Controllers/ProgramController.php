@@ -5,7 +5,7 @@ use App\Models\Subject;
 use App\Models\Program;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
+use App\Models\ProgramPart;
 class ProgramController extends Controller
 {
     /**
@@ -30,31 +30,39 @@ class ProgramController extends Controller
     /**
      * Store a newly created program.
      */
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'code' => 'nullable|string|max:50|unique:programs,code',
-            'description' => 'nullable|string',
-            'duration' => 'nullable|string|max:100',
-            'staff_type' => 'nullable|string|max:100',
-            'degree_type' => 'nullable|string|max:100',
-            'eligibility' => 'nullable|string',
-            'fee' => 'nullable|numeric|min:0',
-            'is_active' => 'nullable|boolean',
-            
-        ]);
+   public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name'        => 'required|string|max:255',
+        'code'        => 'nullable|string|max:50|unique:programs,code',
+        'description' => 'nullable|string',
+        'duration'    => 'nullable|string|max:100',
+        'staff_type'  => 'nullable|string|max:100',
+        'degree_type' => 'nullable|string|max:100',
+        'eligibility' => 'nullable|string',
+        'fee'         => 'nullable|numeric|min:0',
+        'is_active'   => 'nullable|boolean',
 
-        $validated['slug'] = Str::slug($validated['name']);
-        $validated['is_active'] = $request->boolean('is_active');
+        'part_id'     => 'required|exists:parts,id',
+    ]);
 
-        Program::create($validated);
+    $validated['slug'] = Str::slug($validated['name']);
+    $validated['is_active'] = $request->boolean('is_active');
 
-        return redirect()
-            ->route('programs.index')
-            ->with('success', 'Program created successfully.');
-    }
+    // Create Program
+    $program = Program::create($validated);
 
+    // Create Program-Part record
+    ProgramPart::create([
+        'program_id' => $program->id,
+        'part_id'    => $request->part_id,
+        'fees'       => $request->fee ?? 0,
+    ]);
+
+    return redirect()
+        ->route('programs.index')
+        ->with('success', 'Program created successfully.');
+}
     /**
      * Display a specific program.
      */

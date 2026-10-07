@@ -28,43 +28,43 @@
           <!-- rows -->
           <div class="row g-3">
 
-
+@foreach($galleries as $gallery)
              <!-- columns -->
             <div class="col-lg-3">
               <div class="activity-card">
                 <div class="activity-image">
-                  <img src="{{ asset('frontend/assets/imgs/activities-3.png') }}" alt="Research projects" class="img-fluid" loading="lazy">
+                  <img src="{{ asset('storage/' . $gallery->image) }} " alt="Research projects" class="img-fluid" loading="lazy">
                 </div>
                 
               </div>
             </div>
-
-            <div class="col-lg-3">
+@endforeach
+            <!-- <div class="col-lg-3">
               <div class="activity-card">
                 <div class="activity-image">
                   <img src="{{ asset('frontend/assets/imgs/activities-6.png') }}" alt="Cultural activities" class="img-fluid" loading="lazy">
                 </div>
                 
               </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
               <div class="activity-card">
                 <div class="activity-image">
                   <img src="{{ asset('frontend/assets/imgs/activities-9.png') }}" alt="Sports activities" class="img-fluid" loading="lazy">
                 </div>
                 
               </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
               <div class="activity-card">
                 <div class="activity-image">
                   <img src="{{ asset('frontend/assets/imgs/activities-6.png') }}" alt="Cultural activities" class="img-fluid" loading="lazy">
                 </div>
                 
               </div>
-            </div> 
+            </div>  -->
             <!-- end coloumn -->
 
            <!-- end row -->

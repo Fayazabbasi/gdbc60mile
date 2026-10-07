@@ -17,7 +17,7 @@
               <li><a href="{{ route('frontend.mission') }}">Vision and Mission</a></li>
               <li><a href="{{ route('frontend.principal') }}">Principal of College</a></li>
               <li><a href="{{ route('frontend.faculty-members') }}">Faculty &amp; Staff</a></li>
-              <li><a href="{{ route('structure.organization') }}">Organizational structure</a></li>
+              <!-- <li><a href="{{ route('structure.organization') }}">Organizational structure</a></li> -->
               <li><a href="{{ route('frontend.gallery') }}">Picture Gallery</a></li>
               
               <li><a href="{{ route('frontend.campus-facilities') }}">Campus &amp; Facilities</a></li>

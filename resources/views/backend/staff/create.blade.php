@@ -184,7 +184,7 @@
                         <option selected>Select Type</option>
                         <option value="management">management</option>
                         <option value="teaching">teaching</option>
-                        <option value="non-teaching">non-teaching</option>
+                        <option value="non_teaching">non-teaching</option>
                         
                       </select>
                     </div>
